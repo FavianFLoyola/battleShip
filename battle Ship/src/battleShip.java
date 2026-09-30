@@ -5,7 +5,8 @@ public class battleShip
 
 		public static void main(String[] args)
 			{
-				display();
+				intro();
+				//display();
 
 			}
 		public static void display()
@@ -30,5 +31,24 @@ public class battleShip
 				System.out.println("F | "+ board[5][0] +" | | "+ board[5][1] +" | | "+ board[5][2] +" | | "+ board[5][3] +" | | "+ board[5][4] +" | | "+ board[5][5] +" |");
 				System.out.println("  -----------------------------");
 			}
-
+		public static void intro()
+			{
+				System.out.println("+----------------------------------------------------------+");
+		        System.out.println("|  [o]  [o]    ===>  B A T T L E S H I P  <===   [o]  [o]  |");
+		        System.out.println("+----------------------------------------------------------+");
+		        System.out.println("| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~|");
+		        System.out.println("|                   ~ ~ ~ [|]___|___[|] ~                  |");
+		        System.out.println("|                   \\\\_____o_o_o_o_____//                  |");
+		        System.out.println("| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~|");
+		        System.out.println("+----------------------------------------------------------+");
+			}
+		public static void mainGame()
+			{
+				Scanner userIntInput = new Scanner(System.in);
+				Scanner userStringInput = new Scanner(System.in);
+				System.out.println("");
+				System.out.println("(1) START GAME");
+				System.out.println("(2) INFO");
+				int startGame = userIntInput.nextInt();
+			}
 	}
