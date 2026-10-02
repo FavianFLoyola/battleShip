@@ -6,6 +6,7 @@ public class battleShip
 		public static void main(String[] args)
 			{
 				intro();
+				mainGame();
 				//display();
 
 			}
@@ -44,11 +45,16 @@ public class battleShip
 			}
 		public static void mainGame()
 			{
+				int shipPieces = 7;
 				Scanner userIntInput = new Scanner(System.in);
 				Scanner userStringInput = new Scanner(System.in);
 				System.out.println("");
 				System.out.println("(1) START GAME");
-				System.out.println("(2) INFO");
+				System.out.println("(2) QUIT");
 				int startGame = userIntInput.nextInt();
+				if (startGame == 1)
+					{
+						display();
+					}
 			}
 	}
