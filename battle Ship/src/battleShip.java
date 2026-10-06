@@ -66,7 +66,7 @@ public class battleShip
 
 							if (selectBoard == 1)
 								{
-									display(BoardList.board1);
+									//display(BoardList.board1);
 									
 									display(BoardList.board1e);
 									System.out.println("Guess what letter row then after number colume the ship is!");
@@ -122,10 +122,13 @@ public class battleShip
 											display(BoardList.board2e);
 											guesses++;
 										}
-									else 
+									else if(guess.length()> 2)
 										{
+								
 											System.out.println("INVALID! Please re input your guess!");
+												
 										}
+										
 									
 								}
 							else if (selectBoard == 3)
