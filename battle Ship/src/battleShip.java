@@ -72,27 +72,31 @@ public class battleShip
 									System.out.println("Guess what letter row then after number colume the ship is!");
 									System.out.println("Guesses: "+ guesses );
 									String guess = userStringInput.nextLine().toUpperCase();
-									int row = guess.charAt(0) - 'A';
-									int col = Character.getNumericValue(guess.charAt(1)) - 1;
-									if(BoardList.board1[row][col].equals("X"))
+									if (guess.length() >= 2 && guess.charAt(0) >= 'A' && guess.charAt(0) <= 'F' && guess.charAt(1) >= '1' && guess.charAt(1) <= '6')
+										//help by Gemini
 										{
-											System.out.println("HIT");
-											BoardList.board1e[row][col] = "X";
-											display(BoardList.board1e);
-											guesses++;
-											hitCounter++;
+										    int row = guess.charAt(0) - 'A';
+										    int col = Character.getNumericValue(guess.charAt(1)) - 1;
+
+										    if (BoardList.board1[row][col].equals("X"))
+										    {
+										        System.out.println("HIT");
+										        BoardList.board1e[row][col] = "X";
+										        display(BoardList.board1e);
+										        guesses++;
+										        hitCounter++;
+										    }
+										    else if (BoardList.board1[row][col].equals(" "))
+										    {
+										        System.out.println("Miss");
+										        BoardList.board1e[row][col] = "O";
+										        display(BoardList.board1e);
+										        guesses++;
+										    }
 										}
-									
-									else if(BoardList.board1[row][col].equals(" "))
+										else 
 										{
-											System.out.println("Miss");
-											BoardList.board1e[row][col] = "O";
-											display(BoardList.board1e);
-											guesses++;
-										}
-									else 
-										{
-											System.out.println("INVALID! Please re input your guess!");
+										    System.out.println("INVALID! Please re input your guess!");
 										}
 									
 								}
@@ -104,29 +108,31 @@ public class battleShip
 									System.out.println("Guess what letter row then after number colume the ship is!");
 									System.out.println("Guesses: "+ guesses );
 									String guess = userStringInput.nextLine().toUpperCase();
-									int row = guess.charAt(0) - 'A';
-									int col = Character.getNumericValue(guess.charAt(1)) - 1;
-									if(BoardList.board1[row][col].equals("X"))
+									if (guess.length() >= 2 && guess.charAt(0) >= 'A' && guess.charAt(0) <= 'F' && guess.charAt(1) >= '1' && guess.charAt(1) <= '6')
+										//help by Gemini
 										{
-											System.out.println("HIT");
-											BoardList.board2e[row][col] = "X";
-											display(BoardList.board2e);
-											guesses++;
-											hitCounter++;
+										    int row = guess.charAt(0) - 'A';
+										    int col = Character.getNumericValue(guess.charAt(1)) - 1;
+
+										    if (BoardList.board2[row][col].equals("X"))
+										    {
+										        System.out.println("HIT");
+										        BoardList.board2e[row][col] = "X";
+										        display(BoardList.board2e);
+										        guesses++;
+										        hitCounter++;
+										    }
+										    else if (BoardList.board2[row][col].equals(" "))
+										    {
+										        System.out.println("Miss");
+										        BoardList.board2e[row][col] = "O";
+										        display(BoardList.board2e);
+										        guesses++;
+										    }
 										}
-									
-									else if(BoardList.board1[row][col].equals(" "))
+										else 
 										{
-											System.out.println("Miss");
-											BoardList.board2e[row][col] = "O";
-											display(BoardList.board2e);
-											guesses++;
-										}
-									else if(guess.length()> 2)
-										{
-								
-											System.out.println("INVALID! Please re input your guess!");
-												
+										    System.out.println("INVALID! Please re input your guess!");
 										}
 										
 									
@@ -139,37 +145,41 @@ public class battleShip
 									System.out.println("Guess what letter row then after number colume the ship is!");
 									System.out.println("Guesses: "+ guesses );
 									String guess = userStringInput.nextLine().toUpperCase();
-									int row = guess.charAt(0) - 'A';
-									int col = Character.getNumericValue(guess.charAt(1)) - 1;
-									if(BoardList.board1[row][col].equals("X"))
+									if (guess.length() >= 2 && guess.charAt(0) >= 'A' && guess.charAt(0) <= 'F' && guess.charAt(1) >= '1' && guess.charAt(1) <= '6')
+										//help by Gemini
 										{
-											System.out.println("HIT");
-											BoardList.board3e[row][col] = "X";
-											display(BoardList.board3e);
-											guesses++;
-											hitCounter++;
+										    int row = guess.charAt(0) - 'A';
+										    int col = Character.getNumericValue(guess.charAt(1)) - 1;
+
+										    if (BoardList.board3[row][col].equals("X"))
+										    {
+										        System.out.println("HIT");
+										        BoardList.board3e[row][col] = "X";
+										        display(BoardList.board3e);
+										        guesses++;
+										        hitCounter++;
+										    }
+										    else if (BoardList.board3[row][col].equals(" "))
+										    {
+										        System.out.println("Miss");
+										        BoardList.board3e[row][col] = "O";
+										        display(BoardList.board3e);
+										        guesses++;
+										    }
 										}
-									
-									else if(BoardList.board1[row][col].equals(" "))
+										else 
 										{
-											System.out.println("Miss");
-											BoardList.board3e[row][col] = "O";
-											display(BoardList.board3e);
-											guesses++;
-										}
-									else 
-										{
-											System.out.println("INVALID! Please re input your guess!");
+										    System.out.println("INVALID! Please re input your guess!");
 										}
 								}
-							
+							if(guesses == 36 || hitCounter == 9)
+								{
+									System.out.println("YOU WIN!");
+									playing = false;
+								}
 							
 						}
-						if(guesses == 36 || hitCounter == 9)
-						{
-							System.out.println("YOU WIN!");
-							playing = false;
-						}
+						
 					}
 			}
 	}
