@@ -8,7 +8,8 @@ public class battleShip
 				intro();
 				mainGame();
 				//display();
-
+				System.out.println("hello");
+				
 			}
 		public static void display(String[][] board)
 			{
